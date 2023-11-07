@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250,128,114);
+}
+.box{
+    background-color: rgb(255,182,193);
+    padding: 3% 1.5%;
+    height: 40%;
+    /* width: 30%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.401);
+    animation: dropBox 1s ease forwards; /* Apply the drop animation */
+}
+.counter{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 4px;
+    font-size: 18px;
+    color: rgb(134, 128, 128);
+    font-weight: 500;
+    letter-spacing: 1px;
+    flex-wrap: wrap;
+}
+#textinarea{
+    height: 50%;
+    width: 100%;
+    font-size: 24px;
+    border-radius: 6px;
+    border: 2px solid black;
+    padding: 2%;
+    resize: none;
+}
+#total-chars{
+    color: blue;
+}
+#rem-chars{
+    color: red;
+}
+
+@keyframes dropBox {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
